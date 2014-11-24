@@ -13,9 +13,9 @@ Installation
 
 1. clone repo with the following command in a shell (i.e. from the terminal):  `git clone https://github.com/trcook/wto_python_scrape.git`. By default this will create a directory called `./wto_python_scrape`
 
-2. run local environment installer by executing `./bootstrap.sh` from the root of the cloned repository. 
+2. run local environment installer by executing `./bootstrap.sh` from the root of the cloned repository (i.e. `cd wto_python_scrape` first). 
   - This will install localized python environment and required dependencies. If you want to install these globally, just run `pip install -r requirements.txt` from the repository root. This may or may not work correctly, I haven't tested it and it will depend on your system setup. 
-  - The reason we are using a localized environment is that it ensures some freedom from dependency problems. The localized python environment (i.e. a virtual environment) will create a directory called `venv`, into which a local version of `python 2.7.6` will be installed, with dependency versions installed as specified in `requirements.txt` The total install footprint is, at the moment, only about 10 megabytes or so. 
+  - The reason we are using a localized environment is that it ensures some freedom from dependency problems. The localized python environment (i.e. a virtual environment) will create a directory called `venv` in the repo directory (i.e. `wto_python_scrape/venv`), into which a local version of `python 2.7.6` will be installed, with dependency versions installed as specified in `requirements.txt` The total install footprint is, at the moment, only about 10 megabytes or so. 
 
 3. activate environment -- from shell (at root of the git repo), type: `source ./venv/bin/activate`. This step will need to be done every time we run the scrpits provided in this repo. The first two steps only need to occur on the initial install.
 
