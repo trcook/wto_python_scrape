@@ -17,6 +17,6 @@ Installation
 
 3. activate environment -- from shell (at root of git repo): `source ./venv/bin/activate`
 
-This should take care of most dependencies beyond the following:
+
 
 
