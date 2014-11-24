@@ -1,2 +1,4 @@
 # Do not modify this file -- it is required by pip!
-git-remote-helpers==0.1.0
+fontforge==1.0
+python-qt==0.50
+wsgiref==0.1.2
