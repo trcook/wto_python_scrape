@@ -22,9 +22,9 @@ def adjust_options(options, args):
     base_dir = os.path.abspath('.')
     args[0] = join(base_dir, 'venv')
 
-def after_install(options, home_dir):
-    pip = os.path.join(home_dir, 'bin', 'pip')
-    subprocess.call([pip, 'install', '-r', os.path.join(os.path.abspath('.'),'requirements.txt')])
+# def after_install(options, home_dir):
+#     pip = os.path.join(home_dir, 'bin', 'pip')
+#     subprocess.call([pip, 'install', '-r', os.path.join(os.path.abspath('.'),'requirements.txt')])
 
 """
 
