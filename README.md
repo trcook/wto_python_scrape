@@ -11,7 +11,7 @@ python =>2.6
 Installation
 ============
 
-1. clone repo using:  `git clone https://github.com/trcook/wto_python_scrape.git`. By default this will create a directory called `./wto_python_scrape`
+1. clone repo with the following command in a shell (i.e. from the terminal):  `git clone https://github.com/trcook/wto_python_scrape.git`. By default this will create a directory called `./wto_python_scrape`
 
 2. run local environment installer by executing `./bootstrap.sh` from the root of the cloned repository. 
   - This will install localized python environment and required dependencies. If you want to install these globally, just run `pip install -r requirements.txt` from the repository root. This may or may not work correctly, I haven't tested it and it will depend on your system setup. 
