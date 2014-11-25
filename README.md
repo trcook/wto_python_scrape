@@ -78,7 +78,7 @@ When it's done, it will setup for cryptography to see the libffi library and ins
 Usage
 =====
 
-* fetchjson.py will do most of the heavy lifting here. It will pull down a javascript array of disputes from wto, convert to json (stored in `disputs.json`), and write a file `output.csv` of disputes with third party joiners listed. To get this file:
+* fetchjson.py will do most of the heavy lifting here. It will pull down a javascript array of disputes from wto, convert to json (stored in `disputes.json`), and write a file `output.csv` of disputes with third party joiners listed. To get this file:
 
 ```{bash}
 $ python fetchjson.py
