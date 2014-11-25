@@ -1,6 +1,7 @@
 from scrapy.contrib.spiders import CrawlSpider, Rule
 from scrapy.contrib.linkextractors import LinkExtractor
 import scrapy
+import os
 
 # IN the special case of the wto disputes, we need to get the list of all disputes, so we run this script preliminarily:
 execfile("./fetchjson.py")
@@ -30,5 +31,5 @@ class WTO_Dispute_Link_Spider(CrawlSpider):
 		return dispute
 # based on http://doc.scrapy.org/en/0.24/intro/overview.html
 
-# to run: run $ scrapy crawl wtodisputes -o wto_disputes.json
+# to run: run $ scrapy runspider wtoscraper.py -o wto_disputes.json
 

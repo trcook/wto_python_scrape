@@ -59,3 +59,7 @@ venv/
 # sublime config files.
 *sublime-*
 
+
+# data files
+output.csv
+disputes.json

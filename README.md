@@ -78,8 +78,16 @@ When it's done, it will setup for cryptography to see the libffi library and ins
 Usage
 =====
 
-I'll fill this in when we actually have some scripts to run.
+* fetchjson.py will do most of the heavy lifting here. It will pull down a javascript array of disputes from wto, convert to json (stored in `disputs.json`), and write a file `output.csv` of disputes with third party joiners listed. To get this file:
 
+```{bash}
+$ python fetchjson.py
+```
+from the root of the repo, after activating the venv.
+
+* wto_scraper.py is the scribblings of a full-blown spider for this task, and it provides some general indications for how something like this might be implemented, but it is not needed at this time. The reason for this is that the javascript arrays are not scrapable by scrapy and those contain most of the required information. 
+	* It would probably be easier and less overhead to implement fetchjson.py using any standard python and using curl instead of scrapy. 
+	* For the moment, though, the scrapy install and venv requirements will remain, primarily for use as reference/scaffolding for future projects. Also, it is likely that in the future, the WTO will need to revise the way it keeps its dispute records since this javascript array business is inelegent and will become cumbersome as the number of disputes grows.
 
 NOTES: 
 ======
@@ -89,4 +97,5 @@ This section reserved for miscallaneous project notes to myself/ourselves
 
 After running `python fetchjson.py`, you will have a json file called disputes.json, this will contain information about all 400+ disputes. We'll use this to craft iterated urls for scrapy to follow. 
 
-TODO 11-24-2014 22:12 interpret and parse json, plug into wto_scraper.py PICKUPHERE
+
+update 11-25-2014 12:39 This is mostly done in the fetchjson.py script. It turns out that most of the data that is relevent is stored in that javascript array (pulled out to disputes.json by fetchjson.py). That said, i'm not sure how much we need to work out a full-blown scraper here....
