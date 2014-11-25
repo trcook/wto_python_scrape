@@ -55,3 +55,7 @@ target/
 
 # Custom 2.7.8 Environment
 venv/
+
+# sublime config files.
+*sublime-*
+
