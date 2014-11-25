@@ -6,10 +6,16 @@ A basic python scraper that will be aimed at WTO disputes, but is intended to be
 Requirements:
 =============
 
-python =>2.6
-(stock installation of OSX will satisfy this requirement)
+* python =>2.7
+	* (stock installation of OSX will satisfy this requirement)
+* For os x: xcode command line tools
+	* To build scrapy, we need lxml, but this doesn't build super cleanly through pip without the xcode command line tools installed. on os x 10.10, try `xcode-select --install`. It will either install the proper tools for you or throw an error explaining the tools are already present (which is good).
 
-* to build scrapy, we need lxml, but this doesn't build super cleanly through pip without the xcode command line tools installed. on os x 10.10, try `xcode-select --install`. It will either install the proper tools for you or throw an error explaining the tools are already present (which is good).
+## Project specific requirements:
+
+* node.js
+	* this is needed to grab and process an array on the WTO website that contains a listing of all disputes. The mechanics of the script are in `js_to_json.js` and `fetchjson.py`. This sort of script will prove useful, however if we run into similar data structure in the future.
+	* node.js is installable through homebrew: `brew install node`
 
 ## Additional possible requirements <a id="additionalreqs"></a>
 
@@ -79,3 +85,8 @@ NOTES:
 ======
 
 This section reserved for miscallaneous project notes to myself/ourselves
+
+
+After running `python fetchjson.py`, you will have a json file called disputes.json, this will contain information about all 400+ disputes. We'll use this to craft iterated urls for scrapy to follow. 
+
+TODO 11-24-2014 22:12 interpret and parse json, plug into wto_scraper.py PICKUPHERE
